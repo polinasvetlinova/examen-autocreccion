@@ -37,14 +37,14 @@ window.onload = function(){
 // Recuperamos los datos del fichero XML xml/preguntas.xml
 // xmlDOC es el documento leido XML. 
 function gestionarXml(dadesXml){
- var xmlDoc = dadesXml.responseXML; //Parse XML to xmlDoc
-  
+  var xmlDoc = dadesXml.responseXML; //Parse XML to xmlDoc
   var ans_rad_1;
   var nopciones;
   var inpt;
   document.getElementById('q_01').innerHTML=xmlDoc.getElementsByTagName("title")[0].innerHTML;
-  ans_rad_1 = xmlDoc.getElementById("q_01").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
-  nopciones = xmlDoc.getElementById("q_01").getElementsByTagName("option").length;
+  ans_rad_1 = xmlDoc.getElementById('q_01').getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
+  select=document.getElementById("in_1"); 
+  nopciones = xmlDoc.getElementById('q_01').getElementsByTagName("option").length;
   for (i = 0; i < nopciones; i++)
   { 
     inpt = document.createElement("input");
