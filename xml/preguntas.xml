@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-<!DOCTYPE questions>
-
-<questions> 
- <question id="q_01">
-  <type>radio</type>
-  <title>1.- ¿Cómo se llama el gato que come lasaña? :</title>
-  <option>a) Garfield   	</option>
-  <option>b) Tom </option>
-  <option>c) Doraemon </option>
-  <option>d) Hello Kitty</option>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE questions  SYSTEM "question.dtd">
+<questions>
+<question id="q_01">
+   <type>radio</type>
+    <title>1.- ¿Cómo se llama el gato que come lasaña? :</title>
+    <option>a) Garfield   	</option>
+    <option>b) Tom </option>
+    <option>c) Doraemon </option>
+    <option>d) Hello Kitty</option>
   <answer>0</answer>
 </question>
 
@@ -97,6 +94,4 @@
   <answer>2</answer>
   <answer>3</answer>
 </question>  	
-
-
 </questions>
