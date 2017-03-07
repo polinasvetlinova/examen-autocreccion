@@ -66,6 +66,25 @@ function gestionarXml(contXml)
     //ANSWER
     var answRadio1 = xmlDoc.getElementById("q_01").getElementsByTagName('answer')[0].innerHTML;
 
+    
+      function ponerDatosRadio(tituloRadio, IDposicion, opciones, divID) {
+    document.getElementById(IDposicion).innerHTML = tituloRadio;
+    var radioContainer = document.getElementById(divID);
+
+    for (i = 0; i < opciones.length; i++) {
+        var input = document.createElement("input");
+        var label = document.createElement("label");
+        label.innerHTML = opciones[i];
+        label.setAttribute("for", "rad_" + i + divID);
+        input.id = "rad_" + i + divID;
+        input.type = "radio";
+        input.name = "rad" + divID;
+        radioContainer.appendChild(input);
+        radioContainer.appendChild(label);
+        radioContainer.appendChild(document.createElement("br"));
+    }
+
+}
 
  /*Pregunta tipo 'radio' nº 2.*/
   document.getElementById('q_02').innerHTML=xmlDoc.getElementsByTagName("title")[1].innerHTML;
