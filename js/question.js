@@ -56,20 +56,16 @@ function gestionarXml(contXml)
   var xmlDoc = contXml.responseXML;
   
   /*Pregunta tipo 'radio' nº 1.*/
-  document.getElementById('q_01').innerHTML= xmlDoc.getElementsByTagName("title")[0].innerHTML;
-  res_rad_1 = xmlDoc.getElementById("q_01").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
-  select=document.getElementById("in_1");
-  nopciones = xmlDoc.getElementById("q_01").getElementsByTagName("option").length;
-  for (i = 0; i < nopciones; i++)
-  { 
-    inpt = document.createElement("input");
-    inpt.type = xmlDoc.getElementsByTagName("type")[0].innerHTML;
-    inpt.value=i+1;
-    inpt.name=inpt.type;
-    select.appendChild(inpt);
-    select.innerHTML += xmlDoc.getElementById("q_01").getElementsByTagName("option")[i].innerHTML;
-    select.innerHTML+="<br/>";
-  } 
+   var tituloRadio = xmlDoc.getElementsByTagName("title")[0].innerHTML;
+    var opcionesRadio = [];
+    var nopt = xmlDoc.getElementById("q_01").getElementsByTagName('option').length;
+    for (i = 0; i < nopt; i++) {
+        opcionesRadio[i] = xmlDoc.getElementById("q_01").getElementsByTagName('option')[i].innerHTML;
+    }
+    ponerDatosRadio(tituloRadio, "q1", opcionesRadio, "radioDiv1");
+    //ANSWER
+    var answRadio1 = xmlDoc.getElementById("q_01").getElementsByTagName('answer')[0].innerHTML;
+
 
  /*Pregunta tipo 'radio' nº 2.*/
   document.getElementById('q_02').innerHTML=xmlDoc.getElementsByTagName("title")[1].innerHTML;
