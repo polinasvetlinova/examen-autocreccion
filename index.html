@@ -1,60 +1,123 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
-<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
-<script src='js/questions.js'></script>
-</head>
+<html lang="es">
+	<head>
+		<title>Examen 1 - Total University</title>
+		<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+		<meta name="description" content="Examen demostración el uso de XML/JAVASCRIP/HTML">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+		<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+		<script src="js/questions.js"></script>
+	</head>
+
+<body>
+	
+	<!--Cabecera-->
+	<div id="homeDiv">
+		<br/>
+		<img src="img/Tot_Univ_2.gif" alt="Total University logo">
+		<h3><b><i>Total University - El mañana es hoy<br/><br/>
+		Sede central: Parque Tecnológico TIC-TAC - Ciudad de las Ciencias - 08002 Madrid<br/></i></b></h3>
+		<div id="menu">
+			<ul>
+				<li><a href="home.html"><b>Página principal</b></a></li>
+				<li><a href="how_to.html"><b>Instrucciones de la prueba</b></a></li>
+				<li><a class="active" href="exam_1.html"><b>Prueba tus conocimientos</b></a></li>
+			</ul>
+		</div>
+	</div>
+<!--Contenedor principal-->
+<main id="exam">
+
+<!--Pregunta tipo RADIO SELECT-->
 	<div>
 		<h5>PREGUNTA 1</h5>
 		<p id='q_01'></p>		
 		<form id="in_1"></form>
 	</div>
 
+	<!--Pregunta tipo RADIO SELECT-->
+	<div>
+		<h5>PREGUNTA 2</h5>
+		<p id='q_02'></p>
+		<form id="in_2"></form>
+	</div>
 
-<h3 id='tituloRadio'></h3>
-<radio id='radio2'></radio>
-<br>
-<br>
+	<!--Pregunta tipo INPUT TXT-->
+	<div>
+		<h5>PREGUNTA 1</h5>
+		<p id='q001'></p>
+		<form id="in_5"></form>
+	</div>
+	<!--Pregunta tipo SELECT-->
+	<div>
+		<h5>PREGUNTA 2</h5>
+		<p id='q002'></p>
+		<form>
+			<select id="in_10"></select>
+		</form>
+	</div>
+	<!--Pregunta tipo SELECT MULTIPLE-->
+	<div>
+		<h5>PREGUNTA 3</h5>
+		<p id='q003'></p>
+		<form>
+			<select id="in_3"></select>
+		</form>
+	</div>
+	<!--Pregunta tipo CHECKBOX SELECT-->
+	<div>
+		<h5>PREGUNTA 4</h5>
+		<p id='q004'></p>
+		<form id="in_4"></form>
+	</div>
+	
+	<!--Pregunta tipo INPUT TEXT-->
+	<div>
+		<h5>PREGUNTA 6</h5>
+		<p id='q006'></p>
+		<form id="in_6"></form>
+	</div>
+	<!--Pregunta tipo SELECT-->
+	<div>	
+		<h5>PREGUNTA 7</h5>
+		<p id='q007'></p>
+		<form>
+			<select id="in_7"></select>
+		</form>
+	</div>
+	<!--Pregunta tipo SELECT MULTIPLE-->
+	<div>
+		<h5>PREGUNTA 8</h5>
+		<p id='q008'></p>
+		<form>
+			<select id="in_8"></select>
+		</form>
+	</div>
+	<!--Pregunta tipo CHECKBOX SELECT-->
+	<div>
+		<h5>PREGUNTA 9</h5>
+		<p id='q009'></p>
+		<form id="in_9"></form>
+	</div>
 
-<h3 id=titleText></h3>
-<input id='text1' type='text'>
-<br>
-<br>
+	<!--Botón que comprueba los resultados al pulsar-->
+	<br/><input id="comp" class="comp" type="button" onclick="" value="Comprobar resultados"><br/>
 
-<h3 id=titleText></h3>
-<input id='text2' type='text'>
-<br>
-<br>
+</main>
+<!--contenedor para mostrar resultados al comprobar-->
+<div id="comprobacion">
+	<h5>RESULTADOS: </h5>
+</div>
 
-<h3 id='tituloCheckbox'></h3>
-<div id='checkboxDiv'></div>
-<br><br>
+<footer>
+	<address>
+		<p>Creado por: Fco. Javier Olvera Martínez - <small>Febrero 2017</small></p>
+		<p>1º ASIX - LMSGI - UT 3</p>
+		<a href="mailto:f.j.olvera@gmail.com">Contacto</a>
+	</address>
+</footer>
 
-<h3 id='tituloCheckbox'></h3>
-<div id='checkboxDiv'></div>
-<br><br>
-
-<h3 id='tituloSelect'></h3>
-<select id='sel1'>
- 	<option selected value="-1">Selecciona una...</option>
-</select>
-<br><br>
-
-<h3 id='tituloSelect'></h3>
-<select id='sel2'>
- 	<option selected value="-1">Selecciona una...</option>
-</select>
-<br><br>
-
-<h3 id='tituloMultiple'></h3>
-<select multiple="mul1">
-</select>
-
-<h3 id='tituloMultiple'></h3>
-<select multiple="mul2">
-</select>
-
-</form>
 </body>
+</html>

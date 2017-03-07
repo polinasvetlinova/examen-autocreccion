@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE questions  SYSTEM "question.dtd">
 <questions>
 <question id="q_01">
    <type>radio</type>
-    <title>1.- ¿Cómo se llama el gato que come lasaña? :</title>
+    <title>¿Cómo se llama el gato que come lasaña? :</title>
     <option>a) Garfield   	</option>
     <option>b) Tom </option>
     <option>c) Doraemon </option>
@@ -13,7 +13,7 @@
 
 <question id="q_02">
   <type>radio</type>
-  <title>1.-¿Cómo se llama el gato que persigue a Jerry? :</title>
+  <title>¿Cómo se llama el gato que persigue a Jerry? :</title>
   <option>a) Heidi </option>
   <option>b) Marco </option>
   <option>c) Tom </option>
