@@ -1,8 +1,5 @@
 var formElement=null;
-var numeroSecreto=null;
-var respuestaSelect=null;
-var respuestasCheckbox = [];
-var nota = 0;  //nota de la prueba sobre 3 puntos (hay 3 preguntas)
+var nota = 0;  //nota de la prueba
 
 var answRadio1;
 var answRadio2;
@@ -32,6 +29,7 @@ window.onload = function(){
     corregirSelect2();
     corregirMulti1();
     corregirMulti2();
+    document.getElementById("resultadosDiv").style(display="block");
     presentarNota();
   }
  
@@ -52,14 +50,14 @@ window.onload = function(){
 function gestionarXml(contXml){
   var xmlDoc = contXml.responseXML;
   var inpt = document.createElement("input");
-  /*radio1*/
+
+/*radio1*/
 /*Pregunta tipo 'radio' nº 1.*/
   document.getElementById('q01').innerHTML=xmlDoc.getElementsByTagName("title")[0].innerHTML;
   answRadio1 = xmlDoc.getElementById("q_01").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select=document.getElementById("in_1");
-  nopciones = xmlDoc.getElementById("q_01").getElementsByTagName("option").length;
-  for (i = 0; i < nopciones; i++)
-  { 
+  var nopciones = xmlDoc.getElementById("q_01").getElementsByTagName("option").length;
+  for (i = 0; i < nopciones; i++){ 
     inpt = document.createElement("input");
     inpt.type = xmlDoc.getElementsByTagName("type")[0].innerHTML;
     inpt.value=i+1;
@@ -70,12 +68,11 @@ function gestionarXml(contXml){
   } 
   
   /*radio2*/
-   document.getElementById('q02').innerHTML=xmlDoc.getElementsByTagName("title")[1].innerHTML;
+  document.getElementById('q02').innerHTML=xmlDoc.getElementsByTagName("title")[1].innerHTML;
   answRadio2 = xmlDoc.getElementById("q_02").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select=document.getElementById("in_2");
   nopciones = xmlDoc.getElementById("q_02").getElementsByTagName("option").length;
-  for (i = 0; i < nopciones; i++)
-  { 
+  for (i = 0; i < nopciones; i++){ 
     inpt = document.createElement("input");
     inpt.type = xmlDoc.getElementsByTagName("type")[1].innerHTML;
     inpt.value=i+1;
@@ -274,7 +271,7 @@ function corregirCheckbox1(){
   var corr=0;
   var opt = document.getElementById("in_5").elements["checkbox"];
 
-  for (i = 0; i < opt.length; i++)
+    for (i = 0; i < opt.length; i++)
   {
     if(opt[i].checked) 
     {
