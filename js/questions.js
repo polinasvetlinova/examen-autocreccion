@@ -29,9 +29,11 @@ window.onload = function(){
     corregirSelect2();
     corregirMulti1();
     corregirMulti2();
+    presentarNota();
     document.getElementById("resultadosDiv").style.display="block";
     window.scrollTo(document.getElementById("resultadosDiv"));
-    presentarNota();
+   alert("Tu nota es: "+nota);
+    
   }
  
  //LEER XML de xml/preguntas.xml
