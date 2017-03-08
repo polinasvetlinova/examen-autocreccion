@@ -4,10 +4,10 @@ body,input,select,label{font-size:5vw;font-family:'Lobster';}
 h3{font-size:7vw}
 input,select{width:80%}
 input[type=checkbox]{width:5%;zoom:1.5}input[type=radio]{width:5%;zoom:1.5}
-form{font-size:4vw;background-color:silver;padding:2%;color:black;font-family:'Lobster';text-align: center;border-style:ridge;border-width: 3px;}
+form{font-size:4vw;background-color:silver;padding:2%;color:black;font-family:'Lobster';text-align: left;border-style:ridge;border-width: 3px;}
 
 #comp{
-	position: absolute;
+	position: fixed;
 height: 90px;
 margin-bottom: 1%;
 background: lightslategrey;  
