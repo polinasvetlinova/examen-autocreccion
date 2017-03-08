@@ -1,6 +1,6 @@
 var formElement=null;
 var nota = 0;  //nota de la prueba
-//hola mundo
+//hola mundo shte se napikaq
 var answRadio1;
 var answRadio2;
 var answText1;
