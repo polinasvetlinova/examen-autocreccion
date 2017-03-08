@@ -10,12 +10,7 @@ height: 90px;
 margin-bottom: 1%;
 background: rgb(255,255,0);  
 }
-#in_1, #in_2 {
-	width:5%;
-}
-#in_1:hover{
-	background-color: darkgray;
-}
+
 #comp:hover {
 	background: rgb(255,0,0);
 }
