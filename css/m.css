@@ -4,9 +4,10 @@ body,input,select,label{font-size:5vw;font-family:'Lobster';}
 h3{font-size:7vw}
 input,select{width:80%}
 input[type=checkbox]{width:5%;zoom:1.5}input[type=radio]{width:5%;zoom:1.5}
-form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lobster';text-align: left;border-style:ridge;border-width: 5px;}
+form{font-size:4vw;background-color:silver;padding:2%;color:black;font-family:'Lobster';text-align: center;border-style:ridge;border-width: 3px;}
 
 #comp{
+	position: absolute;
 height: 90px;
 margin-bottom: 1%;
 background: lightslategrey;  
@@ -26,7 +27,7 @@ p{
 div {
 	margin-top:3%;
 	text-align: center;
-	font-size:3vw;
+	font-size:5vw;
 	background-color: dimgray;
 	color:white;
 }
@@ -35,7 +36,7 @@ div {
 	display:none;
 	padding:1%;
 	text-align: left;
-	font-size:2vw;
+	font-size:4vw;
 	border-style:outset;
 	border-width: 5px;
 }
