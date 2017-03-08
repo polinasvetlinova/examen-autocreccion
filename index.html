@@ -1,122 +1,86 @@
-
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Examen 1 - Total University</title>
-		<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
-		<meta name="description" content="Examen demostración el uso de XML/JAVASCRIP/HTML">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
-		<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
-		<script src="js/questions.js"></script>
-	</head>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+ <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+<script src='js/questions.js'></script>
+</head>
 
 <body>
-	
-	<!--Cabecera-->
-	<div id="homeDiv">
-		<br/>
-		<img src="img/Tot_Univ_2.gif" alt="Total University logo">
-		<h3><b><i>Total University - El mañana es hoy<br/><br/>
-		Sede central: Parque Tecnológico TIC-TAC - Ciudad de las Ciencias - 08002 Madrid<br/></i></b></h3>
-		<div id="menu">
-			<ul>
-				<li><a href="home.html"><b>Página principal</b></a></li>
-				<li><a href="how_to.html"><b>Instrucciones de la prueba</b></a></li>
-				<li><a class="active" href="exam_1.html"><b>Prueba tus conocimientos</b></a></li>
-			</ul>
-		</div>
-	</div>
-<!--Contenedor principal-->
-<main id="exam">
 
-<!--Pregunta tipo RADIO SELECT-->
-<div class="all">
-         <h3 id="q1">1</h3>
-        <div id="radioDiv1"></div>
-     </div>
- <br><br>
-	<!--Pregunta tipo RADIO SELECT-->
+		<!--Pregunta tipo RADIO SELECT-->
 	<div>
-		<h5>PREGUNTA 2</h5>
-		<p id='q_02'></p>
+		<p id='q01'></p>		
+		<form id="in_1"></form>
+	</div>
+
+		<!--Pregunta tipo RADIO SELECT-->
+	<div>
+		<p id='q02'></p>		
 		<form id="in_2"></form>
 	</div>
 
-	<!--Pregunta tipo INPUT TXT-->
+		<!--Pregunta tipo INPUT TEXT-->
 	<div>
-		<h5>PREGUNTA 1</h5>
-		<p id='q001'></p>
-		<form id="in_5"></form>
+		<p id='q03'></p>
+		<form id="in_3"></form>
 	</div>
-	<!--Pregunta tipo SELECT-->
+
+		<!--Pregunta tipo INPUT TEXT-->
 	<div>
-		<h5>PREGUNTA 2</h5>
-		<p id='q002'></p>
-		<form>
-			<select id="in_10"></select>
-		</form>
-	</div>
-	<!--Pregunta tipo SELECT MULTIPLE-->
-	<div>
-		<h5>PREGUNTA 3</h5>
-		<p id='q003'></p>
-		<form>
-			<select id="in_3"></select>
-		</form>
-	</div>
-	<!--Pregunta tipo CHECKBOX SELECT-->
-	<div>
-		<h5>PREGUNTA 4</h5>
-		<p id='q004'></p>
+		<p id='q04'></p>
 		<form id="in_4"></form>
 	</div>
-	
-	<!--Pregunta tipo INPUT TEXT-->
+
+		<!--Pregunta tipo CHECKBOX SELECT-->
 	<div>
-		<h5>PREGUNTA 6</h5>
-		<p id='q006'></p>
+		<p id='q05'></p>
+		<form id="in_5"></form>
+	</div>
+
+	<!--Pregunta tipo CHECKBOX SELECT-->
+	<div>
+		<p id='q06'></p>
 		<form id="in_6"></form>
 	</div>
-	<!--Pregunta tipo SELECT-->
-	<div>	
-		<h5>PREGUNTA 7</h5>
-		<p id='q007'></p>
+
+		<!--Pregunta tipo SELECT-->
+	<div>
+		<p id='q07'></p>
 		<form>
 			<select id="in_7"></select>
 		</form>
 	</div>
-	<!--Pregunta tipo SELECT MULTIPLE-->
+
+	<!--Pregunta tipo SELECT-->
 	<div>
-		<h5>PREGUNTA 8</h5>
-		<p id='q008'></p>
+		<p id='q08'></p>
 		<form>
 			<select id="in_8"></select>
 		</form>
 	</div>
-	<!--Pregunta tipo CHECKBOX SELECT-->
+
+	<!--Pregunta tipo SELECT MULTIPLE-->
 	<div>
-		<h5>PREGUNTA 9</h5>
-		<p id='q009'></p>
-		<form id="in_9"></form>
+		<p id='q09'></p>
+		<form>
+			<select id="in_9"></select>
+		</form>
 	</div>
 
+	<!--Pregunta tipo SELECT MULTIPLE-->
+	<div>
+		<p id='q10'></p>
+		<form>
+			<select id="in_10"></select>
+		</form>
+	</div>
 	<!--Botón que comprueba los resultados al pulsar-->
 	<br/><input id="comp" class="comp" type="button" onclick="" value="Comprobar resultados"><br/>
 
-</main>
-<!--contenedor para mostrar resultados al comprobar-->
-<div id="comprobacion">
-	<h5>RESULTADOS: </h5>
-</div>
 
-<footer>
-	<address>
-		<p>Creado por: Fco. Javier Olvera Martínez - <small>Febrero 2017</small></p>
-		<p>1º ASIX - LMSGI - UT 3</p>
-		<a href="mailto:f.j.olvera@gmail.com">Contacto</a>
-	</address>
-</footer>
-
+ <div id='resultadosDiv'></div>
+ 
 </body>
 </html>
