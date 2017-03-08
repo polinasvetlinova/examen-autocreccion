@@ -4,7 +4,7 @@ body,input,select,label{font-size:3vw}
 h3{font-size:5vw}
 input,select{width:50%}
 input[type=checkbox]{width:5%;zoom:1.5}
-form{background-color:silver;padding:3%,color:black;}
+form{background-color:silver;padding:3%;color:black;}
 #comp{
 	height: 90px;
 margin-bottom: 1%;
