@@ -30,7 +30,7 @@ window.onload = function(){
     corregirMulti1();
     corregirMulti2();
     document.getElementById("resultadosDiv").style.display="block";
-    window.scrollTo(0,document.getElementById("resultadosDiv"));
+    window.scrollTo(document.getElementById("resultadosDiv"),0);
     presentarNota();
   }
  
