@@ -29,7 +29,7 @@ window.onload = function(){
     corregirSelect2();
     corregirMulti1();
     corregirMulti2();
-    document.getElementById("resultadosDiv").style(display="block");
+    document.getElementById("resultadosDiv").style.display="block";
     presentarNota();
   }
  
