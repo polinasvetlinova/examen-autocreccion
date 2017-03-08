@@ -29,11 +29,10 @@ window.onload = function(){
     corregirSelect2();
     corregirMulti1();
     corregirMulti2();
-    presentarNota();
+        presentarNota();
     document.getElementById("resultadosDiv").style.display="block";
     document.getElementById('resultadosDiv').scrollIntoView();
-   alert("Tu nota es: "+nota);
-    
+    alert("Tu nota es: "+nota);
   }
  
  //LEER XML de xml/preguntas.xml
