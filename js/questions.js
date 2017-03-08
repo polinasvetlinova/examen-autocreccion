@@ -31,7 +31,7 @@ window.onload = function(){
     corregirMulti2();
     presentarNota();
     document.getElementById("resultadosDiv").style.display="block";
-    window.scrollTo(document.getElementById("resultadosDiv"));
+    document.getElementById('resultadosDiv').scrollIntoView();
    alert("Tu nota es: "+nota);
     
   }
