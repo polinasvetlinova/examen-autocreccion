@@ -5,7 +5,7 @@ h3{font-size:5vw}
 input,select{width:50%}
 input[type=checkbox]{width:5%;zoom:1.5}
 input[type=radio]{width:5%;zoom:1.5}
-form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lobster';text-align: left;border-style:inset;border:1px;}
+form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lobster';text-align: left;border-style:ridge;border-width: 5px;}
 
 #comp{
 height: 90px;
@@ -27,8 +27,6 @@ div {
 	font-size:3vw;
 	background-color: dimgray;
 	color:white;
-	border-style:inset;
-	border:1px; 
 }
 
 #resultadosDiv {
@@ -36,4 +34,7 @@ div {
 	padding:1%;
 	text-align: left;
 	font-size:2vw;
+	border-style:outset;
+	border-width: 5px;
+	border-color:green;
 }
