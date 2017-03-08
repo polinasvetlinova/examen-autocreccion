@@ -4,20 +4,17 @@ body,input,select,label{font-size:3vw;font-family:'Lobster';}
 h3{font-size:5vw}
 input,select{width:50%}
 input[type=checkbox]{width:5%;zoom:1.5}
-form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lemonada';}
+input[type=radio]{width:5%;zoom:1.5}
+form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lemonada';text-align: left;}
+
 #comp{
 height: 90px;
 margin-bottom: 1%;
 background: rgb(255,255,0);  
 }
 
-.r1 input{
-	width:5%;
-}
-#id_in1:hover{
-	background-color: gainsboro;
-}
-#id_in2:hover{
+
+form:hover{
 	background-color: gainsboro;
 }
 
