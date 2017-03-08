@@ -10,15 +10,19 @@ height: 90px;
 margin-bottom: 1%;
 background: rgb(255,255,0);  
 }
-#id_in1 input{
+.id_in1 input{
 	width: 5%;
 }
-#id_in2 input{
+.id_in2 input{
 	width:5%;
 }
-#id_in1:hover #id_in2:hover{
+#id_in1:hover{
 	background-color: gainsboro;
 }
+#id_in2:hover{
+	background-color: gainsboro;
+}
+
 #comp:hover {
 	background: rgb(255,0,0);
 }
