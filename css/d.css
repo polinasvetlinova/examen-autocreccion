@@ -1,11 +1,11 @@
 body,html{margin:0px}
-body{width:70%;padding-left:15%;padding-right:15%}
+body{width:70%;padding-left:15%;padding-right:15%;background-image: url(../img/bckgrd.png);}
 body,input,select,label{font-size:3vw;font-family:'Lobster';}
 h3{font-size:5vw}
 input,select{width:50%}
 input[type=checkbox]{width:5%;zoom:1.5}
 input[type=radio]{width:5%;zoom:1.5}
-form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lobster';text-align: left;}
+form{font-size:1.75vw;background-color:silver;padding:3%;color:black;font-family:'Lobster';text-align: left;border-style:inset;border:1px;}
 
 #comp{
 height: 90px;
@@ -26,7 +26,9 @@ div {
 	text-align: center;
 	font-size:3vw;
 	background-color: dimgray;
-	color:white; 
+	color:white;
+	border-style:inset;
+	border:1px; 
 }
 
 #resultadosDiv {

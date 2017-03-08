@@ -1,6 +1,6 @@
 var formElement=null;
 var nota = 0;  //nota de la prueba
-//hola mundo shte se napikaq
+
 var answRadio1;
 var answRadio2;
 var answText1;
@@ -30,7 +30,7 @@ window.onload = function(){
     corregirMulti1();
     corregirMulti2();
     document.getElementById("resultadosDiv").style.display="block";
-    document.getElementById('resultadosDiv').scrollIntoView();
+    window.scrollTo(document.getElementById("resultadosDiv"));
     presentarNota();
   }
  
