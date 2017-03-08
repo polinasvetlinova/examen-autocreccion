@@ -10,10 +10,8 @@ height: 90px;
 margin-bottom: 1%;
 background: rgb(255,255,0);  
 }
-.id_in1 input{
-	width: 5%;
-}
-.id_in2 input{
+
+.r1 input{
 	width:5%;
 }
 #id_in1:hover{
@@ -28,6 +26,7 @@ background: rgb(255,255,0);
 }
 
 div {
+	text-align: center;
 	font-size:3vw;
 	background-color: dimgray;
 	color:white; 
