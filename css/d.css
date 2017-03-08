@@ -30,6 +30,7 @@ div {
 }
 
 #resultadosDiv {
+	display:none;
 	padding:1%;
 	text-align: left;
 	font-size:2vw;
