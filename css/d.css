@@ -41,6 +41,7 @@ div {
 	border-width: 5px;
 }
 .intro{
-	font-size: 7vw;
+	font-size: 3vw;
 	text-align: center;
 }
+img{display: block; margin: 0 auto; width: 50%;}
