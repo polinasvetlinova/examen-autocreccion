@@ -3,7 +3,7 @@
 <questions>
 <question id="q_01">
    <type>radio</type>
-    <title>1.- ¿Cómo se llama el gato que come lasaña? :</title>
+    <title>1.- ¿Cómo se llama el gato que come lasaña?</title>
     <option>a) Garfield   	</option>
     <option>b) Tom </option>
     <option>c) Doraemon </option>
@@ -13,7 +13,7 @@
 
 <question id="q_02">
   <type>radio</type>
-  <title>2.-¿Cómo se llama el gato que persigue a Jerry? :</title>
+  <title>2.-¿Cómo se llama el gato que persigue a Jerry?</title>
   <option>a) Heidi </option>
   <option>b) Marco </option>
   <option>c) Tom </option>
@@ -35,7 +35,7 @@
 
 <question id="q_05">
   <type>checkbox</type>
-  <title>5.-¿Existe vida antes del café?:</title>
+  <title>5.-¿Existe vida antes del café?</title>
   <option>a) Sí </option>
   <option>b) No </option>
   <option>c) No lo sé porque soy un fracasado que toma té </option>
@@ -44,7 +44,7 @@
 
 <question id="q_06">
   <type>checkbox</type>
-  <title>6.-¿Cuál es la primera causa del divorcio?:</title>
+  <title>6.-¿Cuál es la primera causa del divorcio?</title>
   <option>a) El cambio climático</option>
   <option>b) El matrimonio</option>
   <option>c) Las enfermedades</option>
