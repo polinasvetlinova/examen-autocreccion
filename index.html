@@ -1,93 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
- <link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-
-<script src='js/questions.js'></script>
+	<title> Universidad Rosa Negra </title>
+	<meta charset="ISO-8859-1">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/ad.css'>
+ 	<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/am.css'>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 </head>
-
 <body>
-
-		<!--Pregunta tipo RADIO SELECT-->
-	<div>
-		<p id='q01'></p>		
-		<form id="in_1"></form>
+	<div id="top"><img src="img/logo.png" alt="logo" id="logo"><h3 id="topT">Universidad Rosa Negra</h3></div>
+	<div id="text">
+			<h1>Universidad Rosa Negra</h1>
+			<p> Bienvenidos a la Universidad Rosa Negra de Mallorca. En esta universidad, poco común, nos dedicamos al diseño elegante que representa el color negro. Nuestra historia se remonta a la antigua Grecia donde los filosofos más destacados llevaban en su ropa una rosa negra colgada, para representar su elegancia y destacar entre el resto de filosofos. <br/>
+			A que espera para formar parte de nuestra pequeña escuela con gran historia?<br/> Solo debera realizar un pequeño test que esta formado por 10 preguntas. Si lo aprueba podra optar a una plaza en nuestra universidad de elegancia.
+			<br/><br/> Para realizar la prueba debera contestar a dos preguntas teoricas y 8 tipo test. Cuando este preparado haga click en el bóton de abajo.</p>
 	</div>
-
-		<!--Pregunta tipo RADIO SELECT-->
-	<div>
-		<p id='q02'></p>		
-		<form id="in_2"></form>
-	</div>
-
-		<!--Pregunta tipo INPUT TEXT-->
-	<div>
-		<p id='q03'></p>
-		<form id="in_3"></form>
-	</div>
-
-		<!--Pregunta tipo INPUT TEXT-->
-	<div>
-		<p id='q04'></p>
-		<form id="in_4"></form>
-	</div>
-
-		<!--Pregunta tipo CHECKBOX SELECT-->
-	<div>
-		<p id='q05'></p>
-		<form id="in_5"></form>
-	</div>
-
-	<!--Pregunta tipo CHECKBOX SELECT-->
-	<div>
-		<p id='q06'></p>
-		<form id="in_6"></form>
-	</div>
-
-		<!--Pregunta tipo SELECT-->
-	<div>
-		<p id='q07'></p>
-		<form>
-			<select id="in_7">
-				<option selected value="-1">Selecciona una...</option>
-			</select>
-		</form>
-	</div>
-
-	<!--Pregunta tipo SELECT-->
-	<div>
-		<p id='q08'></p>
-		<form>
-			<select id="in_8">
-				<option selected value="-1">Selecciona una...</option>
-			</select>
-		</form>
-	</div>
-
-	<!--Pregunta tipo SELECT MULTIPLE-->
-	<div>
-		<p id='q09'></p>
-		<form>
-			<select id="in_9"></select>
-		</form>
-	</div>
-
-	<!--Pregunta tipo SELECT MULTIPLE-->
-	<div>
-		<p id='q10'></p>
-		<form>
-			<select id="in_10"></select>
-		</form>
-	</div>
-	<!--Botón que comprueba los resultados al pulsar-->
-	<br/><input id="comp" class="comp" type="button" onclick="" value="Corregir Examen"><br/>
-
-
- <div id='resultadosDiv'></div>
- <canvas id="confeti"></canvas>
- 
+	<div><br/><input id="start" type="button" onclick="window.location.href='test.html'" value="Start"></div>
 </body>
 </html>

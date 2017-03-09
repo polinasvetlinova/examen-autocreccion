@@ -15,14 +15,10 @@ var answMult2 = [];
 //Después de cargar la página (onload) se definen los eventos sobre los elementos entre otras acciones.
 window.onload = function(){ 
 
-
-formElement=document.getElementById("exam");
-formElement.onclick=function(){
-  inicializar();
-}
  //CORREGIR al apretar el botón
  formElement=document.getElementById("comp");
   formElement.onclick=function(){
+    if(confirm("Esta seguro que desea corregir el examen?")){
     inicializar();
     corregirRadio1();
     corregirRadio2();
@@ -34,11 +30,14 @@ formElement.onclick=function(){
     corregirSelect2();
     corregirMulti1();
     corregirMulti2();
-        presentarNota();
-        document.getElementById("resultadosDiv").style.display="block";
+    presentarNota();
+    document.getElementById("comp").style.display="none";
+    document.getElementById("resultadosDiv").style.display="block";
+    document.getElementById("volver").style.display="block";
     document.getElementById('resultadosDiv').scrollIntoView();
+    alert("Tu nota es: "+nota);
   }
- 
+ }
  //LEER XML de xml/preguntas.xml
  var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function() {
@@ -58,7 +57,7 @@ function gestionarXml(contXml){
   var inpt = document.createElement("input");
 
 /*radio1*/
-/*Pregunta tipo 'radio' nº 1.*/
+/*Pregunta tipo 'radio'  1.*/
   document.getElementById('q01').innerHTML=xmlDoc.getElementsByTagName("title")[0].innerHTML;
   answRadio1 = xmlDoc.getElementById("q_01").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select=document.getElementById("in_1");
@@ -108,7 +107,7 @@ function gestionarXml(contXml){
   inpt.autocomplete="off";
   select.appendChild(inpt);
 
-  /*Pregunta tipo 'checkbox' nº 1.*/
+  /*Pregunta tipo 'checkbox'  1.*/
   document.getElementById('q05').innerHTML = xmlDoc.getElementsByTagName("title")[4].innerHTML;
   answCheck1 = xmlDoc.getElementById("q_05").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select= document.getElementById("in_5");
@@ -131,7 +130,7 @@ function gestionarXml(contXml){
     answCheck1[i]=xmlDoc.getElementById("q_05").getElementsByTagName("answer")[i].innerHTML;
   }
 
-  /*Pregunta tipo 'checkbox' nº 2.*/
+  /*Pregunta tipo 'checkbox'  2.*/
   document.getElementById('q06').innerHTML = xmlDoc.getElementsByTagName("title")[5].innerHTML;
   answCheck2 = xmlDoc.getElementById("q_06").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select= document.getElementById("in_6");
@@ -152,7 +151,7 @@ function gestionarXml(contXml){
     answCheck2[i]=xmlDoc.getElementById("q_06").getElementsByTagName("answer")[i].innerHTML;
   }
 
-  /*Pregunta tipo 'select' nº 1.*/
+  /*Pregunta tipo 'select'  1.*/
   document.getElementById("q07").innerHTML = xmlDoc.getElementsByTagName("title")[6].innerHTML;
   answSelect1 = xmlDoc.getElementById("q_07").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select = document.getElementById("in_7");
@@ -164,7 +163,7 @@ function gestionarXml(contXml){
     option.value=i+1;
     select.appendChild(option);
   } 
-    /*Pregunta tipo 'select' nº 2.*/
+    /*Pregunta tipo 'select'  2.*/
   document.getElementById("q08").innerHTML = xmlDoc.getElementsByTagName("title")[7].innerHTML;
   answSelect2 = xmlDoc.getElementById("q_08").getElementsByTagName("answer")[0].innerHTML;/*Guardamos respuesta/s correctas para comprobación posterior.*/
   select = document.getElementById("in_8");
@@ -176,7 +175,7 @@ function gestionarXml(contXml){
     select.appendChild(option);
   } 
 
-   /*Pregunta tipo select 'multiple' nº 1.*/
+   /*Pregunta tipo select 'multiple'  1.*/
   document.getElementById("q09").innerHTML = xmlDoc.getElementsByTagName("title")[8].innerHTML;
   for (i = 0; i < nres; i++)
   {
@@ -192,7 +191,7 @@ function gestionarXml(contXml){
     option.value=i+1;
     select.appendChild(option);
   } 
-     /*Pregunta tipo select 'multiple' nº 2.*/
+     /*Pregunta tipo select 'multiple'  2.*/
   document.getElementById("q10").innerHTML = xmlDoc.getElementsByTagName("title")[9].innerHTML;
   for (i = 0; i < nres; i++)
   {
@@ -217,8 +216,8 @@ function corregirRadio1(){
   {
     if(opt[i].checked) {r=i;}
   }
-  if(r==answRadio1) {darRespuestaHtml("Nº 1: <b>Correcto!</b>"); nota +=1;}
-  else {darRespuestaHtml("Nº 1: Respuesta incorrecta.");}
+  if(r==answRadio1) {darRespuestaHtml(" 1: <b>Correcto!</b>"); nota +=1;}
+  else {darRespuestaHtml(" 1: Respuesta incorrecta.");}
 }
 function corregirRadio2(){
   var r=null;
@@ -227,8 +226,8 @@ function corregirRadio2(){
   {
     if(opt[i].checked) {r=i;}
   }
-  if(r==answRadio2) {darRespuestaHtml("Nº 2: <b>Correcto!</b>"); nota +=1;}
-  else {darRespuestaHtml("Nº 2: Respuesta incorrecta.");}
+  if(r==answRadio2) {darRespuestaHtml(" 2: <b>Correcto!</b>"); nota +=1;}
+  else {darRespuestaHtml(" 2: Respuesta incorrecta.");}
 }
 
 function darRespuestaHtml(r){
@@ -251,11 +250,11 @@ function corregirText1(){
   var s = document.getElementById("in_3").getElementsByTagName("input")[0].value;
   if (s.toUpperCase()==answText1.toUpperCase())
   {
-    darRespuestaHtml("Nº 3: <b>Correcto!</b>");
+    darRespuestaHtml(" 3: <b>Correcto!</b>");
     nota +=1;
   }
   else{
-      darRespuestaHtml("Nº 3: Respuesta incorrecta, la respuesta era: "+answText1);
+      darRespuestaHtml(" 3: Respuesta incorrecta, la respuesta era: "+answText1);
     }
 }
 
@@ -263,11 +262,11 @@ function corregirText2(){
   var s = document.getElementById("in_4").getElementsByTagName("input")[0].value;
   if (s.toUpperCase()==answText2.toUpperCase())
   {
-    darRespuestaHtml("Nº 4: <b>Correcto!</b>");
+    darRespuestaHtml(" 4: <b>Correcto!</b>");
     nota +=1;
   }
   else{
-      darRespuestaHtml("Nº 4: Respuesta incorrecta, la respuesta era: "+answText2);
+      darRespuestaHtml(" 4: Respuesta incorrecta, la respuesta era: "+answText2);
     }
 }
 
@@ -293,12 +292,12 @@ function corregirCheckbox1(){
   {   
     if (opt[i].checked) 
     {
-      if (v[i]) {nota +=1.0/answCheck1.length; corr++;} /*dividido por el número de respuestas correctas*/     
-      else {nota -=1.0/answCheck1.length; corr--;} /*dividido por el número de respuestas correctas*/   
+      if (v[i]) {nota +=1.0/answCheck1.length; corr++;} /*dividido por el  de respuestas correctas*/     
+      else {nota -=1.0/answCheck1.length; corr--;} /*dividido por el  de respuestas correctas*/   
     }
   }
-  if (corr==answCheck1.length) {darRespuestaHtml("Nº 5: <b>Correcto!</b>");}
-  else {darRespuestaHtml("Nº 5: Respuesta incorrecta.");}
+  if (corr==answCheck1.length) {darRespuestaHtml(" 5: <b>Correcto!</b>");}
+  else {darRespuestaHtml(" 5: Respuesta incorrecta.");}
 }
 
 function corregirCheckbox2(){
@@ -322,32 +321,32 @@ function corregirCheckbox2(){
   {   
     if (opt[i].checked) 
     {
-      if (v[i]) {nota +=1.0/answCheck2.length; corr++;} /*dividido por el número de respuestas correctas*/     
-      else {nota -=1.0/answCheck2.length; corr--;} /*dividido por el número de respuestas correctas*/   
+      if (v[i]) {nota +=1.0/answCheck2.length; corr++;} /*dividido por el  de respuestas correctas*/     
+      else {nota -=1.0/answCheck2.length; corr--;} /*dividido por el  de respuestas correctas*/   
     }
   }
-  if (corr==answCheck1.length) {darRespuestaHtml("Nº 6: <b>Correcto!</b>");}
-  else {darRespuestaHtml("Nº 6: Respuesta incorrecta.");}
+  if (corr==answCheck1.length) {darRespuestaHtml(" 6: <b>Correcto!</b>");}
+  else {darRespuestaHtml(" 6: Respuesta incorrecta.");}
 }
 
 function corregirSelect1(){
   var sel = document.getElementById("in_7");  
   if (sel.selectedIndex==answSelect1)
   {
-    darRespuestaHtml("Nº 7: <b>Correcto!</b>");
+    darRespuestaHtml(" 7: <b>Correcto!</b>");
     nota +=1;
   }
-  else {darRespuestaHtml("Nº 7: Respuesta incorrecta.");}
+  else {darRespuestaHtml(" 7: Respuesta incorrecta.");}
 }
 
 function corregirSelect2(){
   var sel = document.getElementById("in_8");  
   if (sel.selectedIndex==answSelect2)
   {
-    darRespuestaHtml("Nº 8: <b>Correcto!</b>");
+    darRespuestaHtml(" 8: <b>Correcto!</b>");
     nota +=1;
   }
-  else {darRespuestaHtml("Nº 8: Respuesta incorrecta.");}
+  else {darRespuestaHtml(" 8: Respuesta incorrecta.");}
 }
 
 function corregirMulti1(){
@@ -370,12 +369,12 @@ function corregirMulti1(){
   {   
     if (opt[i].selected) 
     {
-      if (v[i]) {nota +=1.0/answMult1.length; corr++;} /*dividido por el número de respuestas correctas*/   
-      else {nota -=1.0/answMult1.length; corr--;} /*dividido por el número de respuestas correctas*/
+      if (v[i]) {nota +=1.0/answMult1.length; corr++;} /*dividido por el  de respuestas correctas*/   
+      else {nota -=1.0/answMult1.length; corr--;} /*dividido por el  de respuestas correctas*/
     }
   }
-  if (corr==answMult1.length) {darRespuestaHtml("Nº 9: <b>Correcto!</b>");}
-  else {darRespuestaHtml("Nº 9: Respuesta incorrecta.");}
+  if (corr==answMult1.length) {darRespuestaHtml(" 9: <b>Correcto!</b>");}
+  else {darRespuestaHtml(" 9: Respuesta incorrecta.");}
 }
 
 function corregirMulti2(){
@@ -398,10 +397,10 @@ function corregirMulti2(){
   {   
     if (opt[i].selected) 
     {
-      if (v[i]) {nota +=1.0/answMult2.length; corr++;} /*dividido por el número de respuestas correctas*/   
-      else {nota -=1.0/answMult2.length; corr--;} /*dividido por el número de respuestas correctas*/
+      if (v[i]) {nota +=1.0/answMult2.length; corr++;} /*dividido por el  de respuestas correctas*/   
+      else {nota -=1.0/answMult2.length; corr--;} /*dividido por el  de respuestas correctas*/
     }
   }
-  if (corr==answMult2.length) {darRespuestaHtml("Nº 10: <b>Correcto!</b>");}
-  else {darRespuestaHtml("Nº 10: Respuesta incorrecta.");}
+  if (corr==answMult2.length) {darRespuestaHtml(" 10: <b>Correcto!</b>");}
+  else {darRespuestaHtml(" 10: Respuesta incorrecta.");}
 }
