@@ -1,5 +1,5 @@
 body,html{margin:0px}
-body{background-image: url(../img/bckgrd.png);width:70%;padding-left:15%;padding-right:15%;}
+body{width:70%;padding-left:15%;padding-right:15%;background-image: url(../img/bckgrd.png);}
 body,input,select,label{font-size:3vw;font-family:'Lobster';}
 h3{font-size:5vw}
 input,select{width:50%}
