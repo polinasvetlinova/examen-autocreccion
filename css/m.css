@@ -40,7 +40,8 @@ div {
 	border-width: 5px;
 }
 .intro{
-	font-size: 7vw;
+	position: fixed;
+	font-size: 6vw;
 	text-align: center;
 }
 
