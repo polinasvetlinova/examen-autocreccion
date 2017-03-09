@@ -39,3 +39,16 @@ div {
 	border-style:outset;
 	border-width: 5px;
 }
+.intro{
+	font-size: 7vw;
+	text-align: center;
+}
+
+#confeti{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}

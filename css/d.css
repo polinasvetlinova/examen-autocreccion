@@ -40,3 +40,7 @@ div {
 	border-style:outset;
 	border-width: 5px;
 }
+.intro{
+	font-size: 7vw;
+	text-align: center;
+}
